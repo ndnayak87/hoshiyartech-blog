@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { SEED_BLOGS, COVERS, CAT_COVER } from "./seed";
 
-const KEY = "hoshiyar_tech_blogs_v22";
-const OLD_KEYS = ["hoshiyar_tech_blogs_v21", "hoshiyar_tech_blogs_v20", "hoshiyar_tech_blogs_v19", "hoshiyar_tech_blogs_v18", "hoshiyar_tech_blogs_v17", "hoshiyar_tech_blogs_v16", "hoshiyar_tech_blogs_v15", "hoshiyar_tech_blogs_v14", "hoshiyar_tech_blogs_v13", "hoshiyar_tech_blogs_v12", "hoshiyar_tech_blogs_v11", "hoshiyar_tech_blogs_v10", "hoshiyar_tech_blogs_v9", "hoshiyar_tech_blogs_v8", "hoshiyar_tech_blogs_v7", "hoshiyar_tech_blogs_v6", "hoshiyar_tech_blogs_v5", "hoshiyar_tech_blogs_v4", "hoshiyar_tech_blogs_v3", "hoshiyar_tech_blogs_v2", "hoshiyar_tech_blogs"];
+const KEY = "hoshiyar_tech_blogs_v23";
+const OLD_KEYS = ["hoshiyar_tech_blogs_v22", "hoshiyar_tech_blogs_v21", "hoshiyar_tech_blogs_v20", "hoshiyar_tech_blogs_v19", "hoshiyar_tech_blogs_v18", "hoshiyar_tech_blogs_v17", "hoshiyar_tech_blogs_v16", "hoshiyar_tech_blogs_v15", "hoshiyar_tech_blogs_v14", "hoshiyar_tech_blogs_v13", "hoshiyar_tech_blogs_v12", "hoshiyar_tech_blogs_v11", "hoshiyar_tech_blogs_v10", "hoshiyar_tech_blogs_v9", "hoshiyar_tech_blogs_v8", "hoshiyar_tech_blogs_v7", "hoshiyar_tech_blogs_v6", "hoshiyar_tech_blogs_v5", "hoshiyar_tech_blogs_v4", "hoshiyar_tech_blogs_v3", "hoshiyar_tech_blogs_v2", "hoshiyar_tech_blogs"];
 const isSeedId = (id) => /^b\d{1,2}$/.test(id || "");
 
 function dedupe(list) {

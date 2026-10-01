@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const AUTH_KEY = "ht_admin_auth";
 const CRED_KEY = "ht_admin_cred";
 
-// Default admin â€” demo password HATA diya gaya hai.
+// Default admin — demo password HATA diya gaya hai.
 // Asli password deploy ke baad owner ke paas private me hai.
 const DEFAULT_CRED = { username: "admin", password: "Tech#Hoshiyar!2026" };
 
