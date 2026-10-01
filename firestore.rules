@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Views counter: padhna sabko allowed,
+    // likhna sirf +1 increment (spam-proof)
+    match /views/{blogId} {
+      allow read: if true;
+      allow create: if request.resource.data.count == 1
+        && request.resource.data.keys().hasOnly(['count']);
+      allow update: if request.resource.data.count == resource.data.count + 1
+        && request.resource.data.keys().hasOnly(['count']);
+    }
+    // Push tokens: subscribe (create) sabko allowed, padhna kisi ko nahi
+    match /push_tokens/{tokenId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+  }
+}
