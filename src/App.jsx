@@ -4,12 +4,14 @@ import { AuthProvider, useAuth } from "./lib/auth";
 import { useBlogs } from "./lib/store";
 import { analytics, logEvent } from "./lib/firebase";
 import { listenForeground } from "./lib/notify";
+import NotifyPrompt from "./components/NotifyPrompt";
 import Header from "./components/Header";
 import { RequireAdmin } from "./components/RequireAdmin";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import Login from "./pages/Login";
 import Write from "./pages/Write";
+import Company from "./pages/Company";
 import Admin from "./pages/Admin";
 
 function ScrollTop() {
@@ -41,10 +43,12 @@ function Shell() {
   return (
     <>
       <ScrollTop />
+      <NotifyPrompt />
       <Header search={search} setSearch={setSearch} />
       <Routes>
         <Route path="/" element={<Home blogs={blogs} search={search} onReset={handleReset} />} />
         <Route path="/post/:id" element={<Post blogs={blogs} onDelete={remove} />} />
+        <Route path="/company" element={<Company />} />
         <Route path="/login" element={<Login />} />
         <Route path="/write" element={<RequireAdmin isAdmin={isAdmin}><Write blogs={blogs} onCreate={create} onUpdate={update} /></RequireAdmin>} />
         <Route path="/edit/:id" element={<RequireAdmin isAdmin={isAdmin}><Write blogs={blogs} onCreate={create} onUpdate={update} /></RequireAdmin>} />

@@ -34,6 +34,9 @@ export default function Header({ search, setSearch }) {
           <button className="btn btn-ghost btn-small" onClick={ring} title="Naye article ki khabar!">
             {bell === "on" ? "🔔 ON" : bell === "..." ? "⏳..." : "🔔 Notify Me"}
           </button>
+          <button className="btn btn-ghost btn-small co-btn" onClick={() => nav("/company")} title="HoshiyarTech Company!">
+            <img src="/logo.jpg" alt="H" /> Company
+          </button>
           <input className="search" placeholder="🔍 Search karo..."
             value={search} onChange={(e) => setSearch(e.target.value)} />
           {isAdmin ? (

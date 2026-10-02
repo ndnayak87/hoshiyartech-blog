@@ -5,7 +5,7 @@ const CRED_KEY = "ht_admin_cred";
 
 // Default admin — demo password HATA diya gaya hai.
 // Asli password deploy ke baad owner ke paas private me hai.
-const DEFAULT_CRED = { username: "admin", password: "Tech#Hoshiyar!2026" };
+const DEFAULT_CRED = { username: "shaurya", password: "Siya2017@" };
 
 function readCred() {
   try {
